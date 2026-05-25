@@ -17,8 +17,7 @@ const PORT = parseInt(process.env.PORT || '3000')
 app.use(cors())
 app.use(express.json({ limit: '10mb' }))
 
-// Servir frontend compilado
-const distPath = path.join(__dirname, '..', 'dist')
+const distPath = path.resolve(__dirname, '..', 'dist')
 app.use(express.static(distPath))
 
 // --- API ---
