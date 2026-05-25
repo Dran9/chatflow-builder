@@ -134,7 +134,7 @@ export async function startTelegramBot(): Promise<Bot> {
     const c = await getContact(from.id)
     const ws = workspaceData as any
     const flows = ws?.flows || []
-    let msg = `Contacto: id=${c?.id || '?', tags=${JSON.stringify(c?.tags || [])}\n\n`
+    let msg = `Contacto: id=${c?.id || '?'}, tags=${JSON.stringify(c?.tags || [])}\n\n`
     msg += `Workspace: ${ws?.name || 'sin nombre'} (${flows.length} flows)\n`
     for (const f of flows) {
       const triggers = f.nodes?.filter((n: any) => n.data?.type === 'trigger') || []

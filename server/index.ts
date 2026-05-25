@@ -74,7 +74,7 @@ app.get('/whatsapp-webhook', async (_req, res) => {
 })
 
 // Fallback: servir index.html para React Router
-app.get('*', (_req, res) => {
+app.get('/{*splat}', (_req, res) => {
   res.sendFile(path.join(distPath, 'index.html'))
 })
 
