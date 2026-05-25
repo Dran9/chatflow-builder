@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 5173",
-    "build": "tsc -b && vite build && node scripts/build-server.mjs",
-    "start": "node dist-server/index.js",
+    "build": "vite build",
+    "start": "node index.cjs",
     "preview": "vite preview"
   },
   "dependencies": {
